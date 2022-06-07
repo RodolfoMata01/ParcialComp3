@@ -1,3 +1,12 @@
+<style>
+    body {
+        background-color: #F3E9DD;
+    }
+</style>
+<br>
+<br>
+<center><h1 style="font-family:copperplate; color:#DAB88B" class="mb-4">LOGIN</h1></center>
+
 <div class="row justify-content-md-center">
     <div class="col-md-4">
         {{#if message}}
@@ -6,15 +15,17 @@
             </div>
         {{/if}}
         <form action="/login" method="POST">
-            <div class="form-group">
+            <div class="form-group" style="font-family:courier new">
                 Email
-                <input type="text" name="email" id="" class="form-control">
+                <input type="text" name="email" id="" class="form-control" placeholder="nombre@example.com" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#FFFF">
             </div>
-            <div class="form-group">
+            <br>
+            <div class="form-group" style="font-family:courier new">
                 Password
-                <input type="password" name="password" id="" class="form-control">
+                <input type="password" name="password" id="" class="form-control" placeholder="Password" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#FFFF">
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <br>
+            <center><button type="submit" class="btn" style="font-family:optima; background-color:#DAB88B; border-color:#DAB88B; color:#FFFF">Login</button></center>
         </form>
     </div>
 </div>
