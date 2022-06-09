@@ -1,0 +1,63 @@
+<style>
+    body {
+        background-color: #F3E9DD;
+    }
+    .contenedor-icono svg{
+    width: 50px;
+    height: 50px;
+    color:#DAB88B;
+    }
+</style>
+
+<div class="contenedor-icono">
+    <a type="button" href="/home" class="btn btn-default btn-circle btn-xl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg></a>
+    
+</div>
+<center><h1 style="font-family:copperplate; color:#DAB88B; margin-top: 50px;" class="mb-4">
+  <div class="contenedor-icono">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+      <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+    </svg></div>
+  {{viewTitle1}}</h1></center>
+
+<div class="position-relative">
+  <div class="position-absolute top-0 start-100 translate-middle">
+    <div class="contenedor-icono" style="margin-right:400px; margin-top: 1px;">
+    <a type="button" href="/asignaturas" class="btn btn-default btn-circle btn-xl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg></a>   
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+        <table  class="table" style="background:#FDF6EC; font-size:large; font-family:courier new" >
+      <thead>
+        <tr>
+        
+          <th scope="col">Asignatura</th>
+          <th scope="col">Descripción</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+          {{#each list}}
+        <tr>
+          <td>{{this.course}}</td>
+          <td>{{this.description}}</td>
+          <td> 
+              <a href="/asignaturas/delete/{{this._id}}"
+              onclick="return confirm('Esta seguro de eliminar?');"
+              class="btn btn-light btn-lg" style="background: #B7CADB;" role="button" aria-pressed="true">Delete</a>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+
+
+  </div>
+</div>

@@ -12,6 +12,11 @@ const hbs = require('hbs');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
+//declaracion de ruta asignatura
+var asignaturasRouter = require('./routes/asig');
+
+
 var app = express();
 
 // view engine setup
@@ -37,6 +42,8 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//ruta de asignatura
+app.use('/asignaturas', asignaturasRouter);
 
 
 // catch 404 and forward to error handler
