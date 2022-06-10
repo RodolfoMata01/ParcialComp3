@@ -23,7 +23,9 @@ router.get('/', (req, res) =>{
 
 router.post('/',(req, res) => {
   if(req.body._id == '')
-  newAsig(req, res)
+  newAsig(req, res);
+  else
+  updateAsig(req, res);
 });
 
 function newAsig(req, res){
@@ -42,6 +44,24 @@ function newAsig(req, res){
 
 }
 
+function updateAsig(req, res){
+  // busca el id y si no encuentra crea uno nuevo
+  Asignaturas.findOneAndUpdate({_id: req.body._id}, req.body, {new: true},
+      (err) =>{
+          //verificar si hay un error
+          if(!err){
+              res.redirect("asignaturas/lista");
+          } else{
+              res.render("pages/asignatura/AddAsig", {
+                  viewTitle: "Editar Asignatura",
+                  asignatura: req.body
+              });
+          }
+      });
+
+}
+
+
 router.get('/lista', (req, res) =>{
   if (req){
       Asignaturas.find((err, docs) =>{
@@ -57,6 +77,17 @@ router.get('/lista', (req, res) =>{
 
   }
   
+});
+
+router.get('/:id',(req, res) => {
+  Asignaturas.findById(req.params.id, (err, docs) =>{
+      if(!err){
+          res.render("pages/asignatura/AddAsig", {
+              viewTitle: "Editar Asignatura",
+              asignatura: docs
+          })
+      }
+  });
 });
 
 
