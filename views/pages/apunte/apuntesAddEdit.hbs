@@ -1,0 +1,47 @@
+<style>
+    body {
+        background-color: #F3E9DD;
+    }
+    .contenedor-icono svg{
+    width: 50px;
+    height: 50px;
+    color:#FFF;
+    }
+</style>
+<div class="contenedor-icono">
+    <a type="button"  href="/apuntes/listApuntes" style="background:#DAB88B; margin-top:20px; margin-left:20px;font-family:courier new; color:#FDF6EC;border-radius:50px;" class="btn btn-default btn-circle btn-xl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg> Ver Lista</a>
+    
+</div>
+<center><h1 style="font-family:copperplate; color:#DAB88B; margin-top: 50px;" class="mb-4">{{viewTitle}}</h1></center>
+
+<div class="row justify-content-md-center" style="font-size:larger;">
+ <div class="col-md-4" style="margin-top: ;">
+    <form action="/apuntes" method="post">
+      <input type="hidden" name="_id" value="{{apuntes._id}}">
+       <div class="form-group" style="font-family:courier new">
+         <strong>Titulo</strong> 
+         <input type="text" name="Titulo" id="Titulo" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apuntes.Titulo}}" required>
+       </div>
+       <br>
+       <div class="form-group" style="font-family:courier new">
+         <strong>Fecha</strong> 
+         <input type="date" name="Fecha" id="Fecha" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apuntes.Fecha}}" required>
+       </div>
+       <br>
+       <div class="form-group" style="font-family:courier new">
+          <strong>Descripción</strong> 
+         <input type="text" name="Descripcion" id="Descripcion" class="form-control" placeholder="Contenido del apunte" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000"value="{{apuntes.descripcion}}" required>
+       </div>
+       <br>
+     <center><strong><button type="submit" class="btn btn-lg" style="font-family:optima; background-color:#DAB88B; border-color:#DAB88B; color:#FFFF">Guardar</button></strong></center>
+    </form>
+  </div>
+   <div style="margin-right:400px; margin-top: 100px;" class="position-relative">
+     <div class="position-absolute top-100 start-100 translate-middle">
+         <img src="sgc.gif" width="200" height="200">
+     </div>
+</div>
+</div>
+

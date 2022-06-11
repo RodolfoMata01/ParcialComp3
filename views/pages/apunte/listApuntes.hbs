@@ -2,12 +2,22 @@
     body {
         background-color: #FDF6EC;
     }
+    .contenedor-icono svg{
+    width: 50px;
+    height: 50px;
+    color:#DAB88B;
+    }
+    .contenedor-icono1 svg{
+    width: 50px;
+    height: 50px;
+    color:#FFF;
+    }
 </style>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
@@ -30,7 +40,7 @@
    <div class="d-flex">
     <div id="sidebar">
       <div class="p-2">
-        <h4><a href="#" style="font-family:optima; font-size:larger; color:#DAB88B" class="navbar-brand text-center w-100 p-4 border-bottom">
+        <h4><a href="/home" style="font-family:optima; font-size:larger; color:#DAB88B" class="navbar-brand text-center w-100 p-4 border-bottom">
           
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/ </svg>
@@ -39,13 +49,21 @@
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">
+        <h4><a href="/home" class="list-group-item list-group-item-action" 
+        style="font-family:copperplate; background-color:#F3E9DD; border-color:#F3E9DD; color:#DAB88B">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+            <i  class=" bi bi-card-checklist mr-3" aria-hidden="true"></i>Inicio
+        </a></h4>
+        <br>
           <h4><a href="/" class="list-group-item list-group-item-action" 
           style="font-family:optima; background-color:#F3E9DD; border-color:#F3E9DD; color:#DAB88B">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
               <path d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"/>
               <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h2zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5V1z"/>
             </svg>
-            <i  class="bi bi-book mr-3" aria-hidden="true"></i>Ver Nota
+            <i  class="bi bi-book mr-3" aria-hidden="true"></i>Calendario
           </a></h4>
           <br>
           <h4><a href="/" class="list-group-item list-group-item-action" 
@@ -54,23 +72,15 @@
               <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
               <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
             </svg>
-            <i  class="bi bi-book mr-3" aria-hidden="true"></i>Registra Notas
+            <i  class="bi bi-book mr-3" aria-hidden="true"></i>Horario de Clases
           </a></h4>
           <br>
-          <h4><a href="/agenda" class="list-group-item list-group-item-action" 
+          <h4><a href="/apuntes" class="list-group-item list-group-item-action" 
           style="font-family:copperplate; background-color:#F3E9DD; border-color:#F3E9DD; color:#DAB88B">
            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
           </svg>
-            <i  class=" bi bi-card-checklist mr-3" aria-hidden="true"></i>Agenda
-          </a></h4>
-          <br>
-          <h4><a href="/asignaturas" class="list-group-item list-group-item-action" 
-          style="font-family:copperplate; background-color:#F3E9DD; border-color:#F3E9DD; color:#DAB88B">
-           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
-            <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-          </svg>
-            <i class="bi bi-card-list mr-3" aria-hidden="true"></i>Asignatura
+            <i  class=" bi bi-card-checklist mr-3" aria-hidden="true"></i>Apuntes
           </a></h4>
           <br>
           <h4><a href="/logout" class="list-group-item list-group-item-action" 
@@ -81,7 +91,7 @@
             </svg>
             <i class="bi bi-card-list mr-3" aria-hidden="true"></i>Salir
           </a></h4>
-          
+          <br>
         </div>
       </div>
     </div>
@@ -89,29 +99,67 @@
     <!--Aqui va toda la base que se encuentra a las dechecha-->
     <div class="position-static">
       <div class="position-absolute top-0 start-50 translate-middle">
-        <h1 style="font-family:copperplate;color:#DAB88B ;margin-top:90px;">STUDENT'S GRADE CALCULATOR</h1>
+        <h1 style="font-family:copperplate;color:#DAB88B ;margin-top:90px;">APUNTES</h1>
       </div>
     </div>
-     <div style="margin-top:70px; margin-left: 100px;;">
-      <img src="im2.png"  width="300" height="600">
-    </div>
-   
-    
-    <div style="margin-left:300px;margin-bottom:200px; " class="position-relative">
-      <div class="position-absolute top-50 start-100 translate-middle">
-        <img  width="400" height="300" src="materias.gif">
-      </div>
-    </div>
-    <div style="margin-left:100px;margin-bottom:100px" class="position-relative">
-     <div class="position-absolute top-100 start-50 translate-middle">
-         <img src="img1.png" width="200" height="200">
-     </div>
-   </div>
-   
-   
-    
+    <div class="contenedor-icono1">
+   <a type="button"  href="/home" style="background:#DAB88B; margin-top:20px; margin-left:20px;font-family:courier new; color:#FDF6EC;border-radius:50px;" class="btn btn-default btn-circle btn-xl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg> Atrás</a>    
+</div>
+<center><h1 style="font-family:copperplate; color:#DAB88B; margin-top: 50px;" class="mb-4">
+  <div class="contenedor-icono">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+      <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+    </svg></div>
 
-    
+  {{viewTitle1}}</h1></center>
+
+<div class="position-relative">
+  <div class="position-absolute top-0 start-100 translate-middle">
+    <div class="contenedor-icono" style="margin-right:400px; margin-top: 1px;">
+    <a type="button" href="/apuntes" class="btn btn-default btn-circle btn-xl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg></a>   
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+        <table  class="table" style="background:#FDF6EC; font-size:large; font-family:courier new" >
+      <thead>
+        <tr>
+          <th scope="col">Titulo</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Descripción</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+          {{#each list}}
+        <tr>
+          <td>{{this.Titulo}}</td>
+          <td>{{this.Fecha}}</td>
+          <td>{{this.Descripcion}}</td>
+          <td> 
+            <a href="/apuntes/{{this._id}}" aria-pressed="true">
+            <svg xmlns="http://www.w3.org/2000/svg" style="color:#B7CADB;"  width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+              <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg></a>
+            <a href="/apuntes/delete/{{this._id}}"
+              onclick="return confirm('¿Esta seguro de que desea eliminar el registro?');"
+              class="btn btn-light btn-lg" style="background: #B7CADB;" role="button" aria-pressed="true">Eliminar</a>
+          </td>
+      
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

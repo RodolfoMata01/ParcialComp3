@@ -8,14 +8,12 @@ const mongoose = require('mongoose');
 const methods = require('./methods');
 const hbs = require('hbs');
 
-
+//declaracion de rutas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-
-//declaracion de ruta asignatura
-var asignaturasRouter = require('./routes/asig');
-
+var asignaturasRouter = require('./routes/asig'); //declaracion de ruta asignatura
+var agendaRouter = require('./routes/agenda')//declaracion de la ruta agenda
+var apuntesRouter = require('./routes/apunte'); //declaracion de la ruta apuntes
 
 var app = express();
 
@@ -31,7 +29,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //colocar antes de las rutas
 //inyectar solicitud leyendo authtoken
 app.use((req, res, next) => {
@@ -40,10 +37,12 @@ app.use((req, res, next) => {
   next();
 })
 
+//registro de rutas
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//ruta de asignatura
-app.use('/asignaturas', asignaturasRouter);
+app.use('/asignaturas', asignaturasRouter); //ruta de asignatura
+app.use('/agenda', agendaRouter); //ruta de agenda
+app.use('/apuntes', apuntesRouter); //ruta de apuntes
 
 
 // catch 404 and forward to error handler
