@@ -19,6 +19,7 @@ var estudiantesRouter = require('./routes/estudiante'); //declaracion de la ruta
 var notaRouter = require('./routes/nota');//declaracion de la ruta nota
 var vernotaRouter = require('./routes/vernota');//declaracion de la ruta vernota
 var horarioRouter = require('./routes/horarios');
+var nota1Router = require('./routes/nota1')//declaracion de la ruta nota1
 var app = express();
 
 // view engine setup
@@ -52,6 +53,7 @@ app.use('/estudiantes', estudiantesRouter); //ruta de Estudiantes
 app.use('/nota', notaRouter); //ruta de nota
 app.use('/vernota', vernotaRouter); //ruta de nota
 app.use('/horario', horarioRouter);
+app.use('/notas1', nota1Router); //ruta de nota de primer grado
 
 
 // catch 404 and forward to error handler
