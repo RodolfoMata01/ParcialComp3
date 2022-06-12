@@ -16,9 +16,9 @@ var agendaRouter = require('./routes/agenda')//declaracion de la ruta agenda
 var apuntesRouter = require('./routes/apunte'); //declaracion de la ruta apuntes
 var alumnoRouter = require('./routes/alumno')//declaracion de la ruta agenda
 var estudiantesRouter = require('./routes/estudiante'); //declaracion de la ruta estudiantes
-var notaRouter = require('./routes/nota')//declaracion de la ruta nota
-var vernotaRouter = require('./routes/vernota')//declaracion de la ruta vernota
-
+var notaRouter = require('./routes/nota');//declaracion de la ruta nota
+var vernotaRouter = require('./routes/vernota');//declaracion de la ruta vernota
+var horarioRouter = require('./routes/horarios');
 var app = express();
 
 // view engine setup
@@ -51,6 +51,7 @@ app.use('/alumno', alumnoRouter); //ruta de Alumno
 app.use('/estudiantes', estudiantesRouter); //ruta de Estudiantes
 app.use('/nota', notaRouter); //ruta de nota
 app.use('/vernota', vernotaRouter); //ruta de nota
+app.use('/horario', horarioRouter);
 
 
 // catch 404 and forward to error handler
