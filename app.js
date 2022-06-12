@@ -20,6 +20,11 @@ var notaRouter = require('./routes/nota');//declaracion de la ruta nota
 var vernotaRouter = require('./routes/vernota');//declaracion de la ruta vernota
 var horarioRouter = require('./routes/horarios');
 var nota1Router = require('./routes/nota1')//declaracion de la ruta nota1
+var nota5Router = require('./routes/nota5')//declaracion de la ruta nota5
+var nota6Router = require('./routes/nota6')//declaracion de la ruta nota6
+var nota7Router = require('./routes/nota7')//declaracion de la ruta nota7
+var nota8Router = require('./routes/nota8')//declaracion de la ruta nota8
+var nota9Router = require('./routes/nota9')//declaracion de la ruta nota9
 var app = express();
 
 // view engine setup
@@ -54,6 +59,11 @@ app.use('/nota', notaRouter); //ruta de nota
 app.use('/vernota', vernotaRouter); //ruta de nota
 app.use('/horario', horarioRouter);
 app.use('/notas1', nota1Router); //ruta de nota de primer grado
+app.use('/notas5', nota5Router); //ruta de nota de quinto grado
+app.use('/notas6', nota6Router); //ruta de nota de sexto grado
+app.use('/notas7', nota7Router); //ruta de nota de septimo grado
+app.use('/notas8', nota8Router); //ruta de nota de octavo grado
+app.use('/notas9', nota9Router); //ruta de nota de noveno grado
 
 
 // catch 404 and forward to error handler
