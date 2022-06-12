@@ -14,6 +14,7 @@ var usersRouter = require('./routes/users');
 var asignaturasRouter = require('./routes/asig'); //declaracion de ruta asignatura
 var agendaRouter = require('./routes/agenda')//declaracion de la ruta agenda
 var apuntesRouter = require('./routes/apunte'); //declaracion de la ruta apuntes
+var alumnoRouter = require('./routes/alumno')//declaracion de la ruta agenda
 var estudiantesRouter = require('./routes/estudiante'); //declaracion de la ruta estudiantes
 
 var app = express();
@@ -44,7 +45,8 @@ app.use('/users', usersRouter);
 app.use('/asignaturas', asignaturasRouter); //ruta de asignatura
 app.use('/agenda', agendaRouter); //ruta de agenda
 app.use('/apuntes', apuntesRouter); //ruta de apuntes
-app.use('/estudiantes', estudiantesRouter); //ruta de apuntes
+app.use('/alumno', alumnoRouter); //ruta de Alumno
+app.use('/estudiantes', estudiantesRouter); //ruta de Estudiantes
 
 
 // catch 404 and forward to error handler

@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
           messageClass: "alert-danger"
         });
       }
-    
 });
 
 router.post('/', (req, res) => {
@@ -46,21 +45,19 @@ function newEstudiante(req, res) {
 
 //metodo para actualizar
 function updateEstudiante(req, res) {
-    Estudiantes.findOneAndUpdate({_id: req.body._id}, req.body, {new: true},
-        (err) => {
-            if(!err){
-                res.redirect("estudiantes/listEstudiantes");
-            } else {
-                console.log("pages/estudiante/estudiantesAddEdit", {
-                    viewTitle: "Editar Estudiante",
-                    estudiante: req.body
-                })
-            }
-        });
+    Estudiantes.findOneAndUpdate({_id: req.body._id}, req.body, {new: true}, (err, doc) => {
+        if(!err){
+            res.redirect("estudiantes/listEstudiantes");
+        } else {
+            res.render("estudiantes/estudiantesAddEdit", {
+                viewTitle: "Editar Estudiante",
+                estudiante: req.body
+            })
+        }
+    });
 }
 
 router.get('/listEstudiantes', (req, res) => {
-
     if (req.user) {
         Estudiantes.find((err, docs) => {
             if(!err){
@@ -72,13 +69,12 @@ router.get('/listEstudiantes', (req, res) => {
                 console.log("Error al listar los estudiantes" + err);
             } 
         })
-        } else {
-            res.render('../views/pages/login', {
-            message: "Inicie sesión para continuar",
-            messageClass: "alert-danger"
-            });
-        }
-    
+      } else {
+        res.render('../views/pages/login', {
+          message: "Inicie sesión para continuar",
+          messageClass: "alert-danger"
+        });
+      }
 })
 
 router.get('/:id', (req, res) => {

@@ -77,8 +77,6 @@ router.get('/listApuntes', (req, res) => {
           messageClass: "alert-danger"
         });
       }
-
-    
 })
 
 router.get('/:id', (req, res) => {
@@ -101,4 +99,5 @@ router.get('/delete/:id', (req, res) => {
         } 
     })
 })
+
 module.exports = router;
