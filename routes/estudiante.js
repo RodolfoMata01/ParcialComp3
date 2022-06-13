@@ -78,11 +78,11 @@ router.get('/listEstudiantes', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Estudiantes.findById(req.params.id, (err, doc) => {
+    Estudiantes.findById(req.params.id, (err, docs) => {
         if(!err){
             res.render("pages/estudiante/estudiantesAddEdit", {
                 viewTitle: "Editar Estudiante",
-                estudiante: doc
+                estudiante: docs
             });
         }
     })

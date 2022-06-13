@@ -19,20 +19,20 @@
 <div class="row justify-content-md-center" style="font-size:larger;">
  <div class="col-md-4" style="margin-top: ;">
     <form action="/apuntes" method="post">
-      <input type="hidden" name="_id" value="{{apuntes._id}}">
+      <input type="hidden" name="_id" value="{{apunte._id}}">
        <div class="form-group" style="font-family:courier new">
          <strong>Titulo</strong> 
-         <input type="text" name="Titulo" id="Titulo" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apuntes.Titulo}}" required>
+         <input type="text" name="Titulo" id="Titulo" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apunte.Titulo}}" required>
        </div>
        <br>
        <div class="form-group" style="font-family:courier new">
          <strong>Fecha</strong> 
-         <input type="date" name="Fecha" id="Fecha" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apuntes.Fecha}}" required>
+         <input type="date" name="Fecha" id="Fecha" class="form-control" placeholder="Escriba el titulo" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000" value="{{apunte.Fecha}}" required>
        </div>
        <br>
        <div class="form-group" style="font-family:courier new">
           <strong>Descripción</strong> 
-         <input type="text" name="Descripcion" id="Descripcion" class="form-control" placeholder="Contenido del apunte" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000"value="{{apuntes.descripcion}}" required>
+         <input type="text" name="Descripcion" id="Descripcion" class="form-control" placeholder="Contenido del apunte" style="background-color:#FDF6EC; border-color:#FDF6EC; color:#000"value="{{apunte.Descripcion}}" required>
        </div>
        <br>
      <center><strong><button type="submit" class="btn btn-lg" style="font-family:optima; background-color:#DAB88B; border-color:#DAB88B; color:#FFFF">Guardar</button></strong></center>

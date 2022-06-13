@@ -84,11 +84,11 @@ router.get('/listhora', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Horarios.findById(req.params.id, (err, doc) => {
+    Horarios.findById(req.params.id, (err, docs) => {
         if(!err){
-            res.render("pages/horario/newhorario", {
+            res.render("pages/horario/newhora", {
 
-                horario: doc
+                horario: docs
             });
         }
     })

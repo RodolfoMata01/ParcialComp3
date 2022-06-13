@@ -80,11 +80,11 @@ router.get('/listApuntes', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Apuntes.findById(req.params.id, (err, doc) => {
+    Apuntes.findById(req.params.id, (err, docs) => {
         if(!err){
             res.render("pages/apunte/apuntesAddEdit", {
                 viewTitle: "Editar Apunte",
-                apunte: doc
+                apunte: docs
             });
         }
     })
