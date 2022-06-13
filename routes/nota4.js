@@ -81,11 +81,11 @@ router.get('/listNotas4', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Notas4.findById(req.params.id, (err, doc) => {
+    Notas4.findById(req.params.id, (err, docs) => {
         if(!err){
             res.render("pages/nota4/notas4AddEdit", {
                 viewTitle: "Modificar Datos",
-                nota4: doc
+                nota4: docs
             });
         }
     })
