@@ -21,6 +21,9 @@ var notaRouter = require('./routes/nota');//declaracion de la ruta nota
 var vernotaRouter = require('./routes/vernota');//declaracion de la ruta vernota
 var horarioRouter = require('./routes/horarios');
 var nota1Router = require('./routes/nota1')//declaracion de la ruta nota1
+var nota2Router = require('./routes/nota2')//declaracion de la ruta nota2
+var nota3Router = require('./routes/nota3')//declaracion de la ruta nota3
+var nota4Router = require('./routes/nota4')//declaracion de la ruta nota4
 var nota5Router = require('./routes/nota5')//declaracion de la ruta nota5
 var nota6Router = require('./routes/nota6')//declaracion de la ruta nota6
 var nota7Router = require('./routes/nota7')//declaracion de la ruta nota7
@@ -61,6 +64,9 @@ app.use('/nota', notaRouter); //ruta de nota
 app.use('/vernota', vernotaRouter); //ruta de nota
 app.use('/horario', horarioRouter);
 app.use('/notas1', nota1Router); //ruta de nota de primer grado
+app.use('/notas2', nota2Router); //ruta de nota de segundo grado
+app.use('/notas3', nota3Router); //ruta de nota de tercer grado
+app.use('/notas4', nota4Router); //ruta de nota de cuarto grado
 app.use('/notas5', nota5Router); //ruta de nota de quinto grado
 app.use('/notas6', nota6Router); //ruta de nota de sexto grado
 app.use('/notas7', nota7Router); //ruta de nota de septimo grado
