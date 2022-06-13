@@ -52,7 +52,7 @@ function updateNota9(req, res) {
         if(!err){
             res.redirect("notas9/listNotas9");
         } else {
-            res.render("notas9/notas9AddEdit", {
+            res.render("pages/notas9/notas9AddEdit", {
                 viewTitle: "Modificar Datos",
                 nota9: req.body
             })
@@ -81,11 +81,11 @@ router.get('/listNotas9', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Notas9.findById(req.params.id, (err, doc) => {
+    Notas9.findById(req.params.id, (err, docs) => {
         if(!err){
             res.render("pages/nota9/notas9AddEdit", {
                 viewTitle: "Modificar Datos",
-                nota9: doc
+                nota9: docs
             });
         }
     })

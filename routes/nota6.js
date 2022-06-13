@@ -52,7 +52,7 @@ function updateNota6(req, res) {
         if(!err){
             res.redirect("notas6/listNotas6");
         } else {
-            res.render("notas6/notas6AddEdit", {
+            res.render("pages/notas6/notas6AddEdit", {
                 viewTitle: "Modificar Datos",
                 nota6: req.body
             })
@@ -81,11 +81,11 @@ router.get('/listNotas6', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Notas6.findById(req.params.id, (err, doc) => {
+    Notas6.findById(req.params.id, (err, docs) => {
         if(!err){
             res.render("pages/nota6/notas6AddEdit", {
                 viewTitle: "Modificar Datos",
-                nota6: doc
+                nota6: docs
             });
         }
     })
